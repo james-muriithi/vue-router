@@ -12,6 +12,10 @@ export default {
     UserItem,
   },
   inject: ['users'],
+  beforeRouteLeave(_, _2, next){
+    const userWantsToLeave = confirm('Are you sure you want to leave?');
+    next(userWantsToLeave);
+  }
 };
 </script>
 

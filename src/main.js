@@ -21,7 +21,7 @@ const router = createRouter({
     },
     { path: '/:Notfound(.*)', redirect: '/' }
   ],
-  scrollBehavior(to, from, savePosition){
+  scrollBehavior(_, _2, savePosition){
     if(savePosition){
         return savePosition;
     }
